@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class MouseLookAround : MonoBehaviour
 {
-    public float rotationX = 0f;
+    public float rotationX = 10f;
     public float rotationY = 0f;
+    public float rotationZ = 0f;
 
-    public float sensitivity = 15f;
+    public float sensitivity = 1f;
 
     void Update()
     {
