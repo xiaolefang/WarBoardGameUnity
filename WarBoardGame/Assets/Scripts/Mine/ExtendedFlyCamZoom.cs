@@ -21,7 +21,6 @@ public class ExtendedFlyCamZoom : MonoBehaviour
 
     void Start()
     {
-        cam = transform.GetChild(0).GetComponent<Camera>();
         zoom = cam.fieldOfView;
     }
 
