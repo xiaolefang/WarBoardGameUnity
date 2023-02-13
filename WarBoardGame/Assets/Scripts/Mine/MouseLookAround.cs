@@ -9,7 +9,7 @@ public class MouseLookAround : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(1)) {
             rotationY += Input.GetAxis("Mouse X") * sensitivity;
             rotationX += Input.GetAxis("Mouse Y") * -1 * sensitivity;
             transform.localEulerAngles = new Vector3(rotationX, rotationY, 0);
