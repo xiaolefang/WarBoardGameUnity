@@ -34,17 +34,17 @@ public class ExtendedFlyCamZoom : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            transform.position += transform.forward * (normalMoveSpeed * fastMoveFactor) * input.x * Time.deltaTime;
-            transform.position += transform.right * (normalMoveSpeed * fastMoveFactor) * input.y * Time.deltaTime;
+            cam.transform.position += cam.transform.forward * (normalMoveSpeed * fastMoveFactor) * input.x * Time.deltaTime;
+            cam.transform.position += cam.transform.right * (normalMoveSpeed * fastMoveFactor) * input.y * Time.deltaTime;
         }
         else
         {
-            transform.position += transform.forward * normalMoveSpeed * input.x * Time.deltaTime;
-            transform.position += transform.right * normalMoveSpeed * input.y * Time.deltaTime;
+            cam.transform.position += cam.transform.forward * normalMoveSpeed * input.x * Time.deltaTime;
+            cam.transform.position += cam.transform.right * normalMoveSpeed * input.y * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.Q)) { transform.position -= transform.up * climbSpeed * Time.deltaTime; }
-        if (Input.GetKey(KeyCode.E)) { transform.position += transform.up * climbSpeed * Time.deltaTime; }
+        if (Input.GetKey(KeyCode.Q)) { cam.transform.position -= cam.transform.up * climbSpeed * Time.deltaTime; }
+        if (Input.GetKey(KeyCode.E)) { cam.transform.position += cam.transform.up * climbSpeed * Time.deltaTime; }
     }
 
     void LateUpdate()
